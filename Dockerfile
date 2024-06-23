@@ -1,5 +1,5 @@
 FROM openjdk:11-jdk-slim
 WORKDIR /app
-COPY src\Main.java .
+COPY src/Main.java .
 RUN javac src\Main.java
-CMD [”java”, “main”]
+CMD [”java”, “Main.java”]
