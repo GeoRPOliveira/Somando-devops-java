@@ -23,10 +23,11 @@ jobs:
         distribution: 'temurin'
 
     - name: Git Version
+      id: ver
       uses: codacy/git-version@2.4.0
           
     - uses: mr-smithers-excellent/docker-build-push@v6
-      name: Deploy Docker image
+      name: Docker
       with:
           image: geogeopet/estudos_pipeline
           tags: ${{github.run_number}}, ${{steps.ver.outputs.version}}
