@@ -30,7 +30,7 @@ jobs:
       name: Docker
       with:
           image: geogeopet/estudos_pipeline
-          tags: ${{github.run_number}}, ${{steps.ver.outputs.version}}
+          tags: DEV-1.${{github.run_number}}
           registry: docker.io
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKERHUB_USUARIO }}
